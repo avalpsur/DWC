@@ -7,6 +7,10 @@ var frase=prompt("Escriba una frase");
 var cont=1;
 var a=0;
 
+if(frase.charAt(0)=="A" || frase.charAt(0)=="a"){
+    a++;
+}
+
 for(var i=0;i<frase.length;i++){
     if (frase.charAt(i)==" "){
         cont++;
@@ -16,8 +20,5 @@ for(var i=0;i<frase.length;i++){
     }
 }
 
-if(frase.charAt(0)=="A"){
-    a++;
-}
 
 alert("La frase tiene "+cont+" palabras y "+a+" empiezan por a");  
