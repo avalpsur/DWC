@@ -1,0 +1,8 @@
+//Asegúrate de que la función se llama tripleAndFilter.
+    function tripleAndFilter(arr){
+    		return arr.map(function(value){
+        			return value * 3;
+     			}).filter(function(value){
+       			return value % 5 === 0;
+      		})
+    }
