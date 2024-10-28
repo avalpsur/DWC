@@ -4,13 +4,15 @@ Crear un objeto Punto con dos coordenadas (x,y) y un método para averiguar el c
 
 */
 
-const Punto = {
-    x:37,
-    y:122,
+function Punto(x,y) {
+    this.x = x;
+    this.y = y;
 
-    cuadrante(){
+    this.saberCuadrante=function(){
         return console.log("Las coordenadas son ("+this.x+","+this.y+")")
     }
 };
 
-Punto.cuadrante();
+let coordenada = new Punto(115,59);
+
+coordenada.saberCuadrante();
