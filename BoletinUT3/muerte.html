@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="crear-ventana" value="Crear Ventana">
+
+    <script type="text/javascript">
+        function abrirVentana(){
+            document.getElementById("crear-ventana").addEventListener('click',crearNueva);
+    
+        }
+
+        var nuevaVentana;
+        function crearNueva(){
+            nuevaVentana = window.open("","_blank","height=400,width=800")
+            nuevaVentana.document.write("Hola")
+        }
+        abrirVentana();
+    </script>
+</body>
+</html>
