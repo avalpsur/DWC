@@ -25,23 +25,12 @@ console.log(asignaturas.size);
 
 console.log(asignaturas);
 
+console.log(asignaturas.keys);
+
+for (let [clave] of asignaturas){
+    console.log({clave});
+}
+
 for (let [clave,valor] of asignaturas){
-    console.log(clave);
+    console.log({valor});
 }
-
-
-for (let [clave,valor] of asignaturas){
-    console.log(valor);
-}
-
-console.log(asignaturas.has("DAW"))
-
-if(asignaturas.has("DAW") == true){
-    asignaturas.delete("DAW")
-}
-console.log(asignaturas.has("DAW"))
-
-let array = [...asignaturas]
-
-array.sort();
-console.log(array);
