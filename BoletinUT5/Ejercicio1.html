@@ -20,7 +20,7 @@
             </li>
             <li>
                 <label for="contraseña">Contraseña:</label>
-                <input type="password" id="contraseña" name="password" required pattern="[(A-Za-z 1-9 ! * $ %)+]">
+                <input type="password" id="contraseña" name="password" required pattern="[A-Za-z0-9!*$%]+">
             </li>
             <li>
                 <label for="fechaNacimiento">Fecha de nacimiento:</label>
@@ -28,11 +28,11 @@
             </li>
             <li>
                 <label for="sexo">Sexo</label>
-                <input type="text" id="sexo" name="sexoPersona" required list="sexos" pattern="[Hh]ombre | [Mm]ujer | [Oo]tro">
+                <input type="text" id="sexo" name="sexoPersona" required list="sexos">
                 <datalist id="sexos">
-                    <option>Hombre</option>
-                    <option>Mujer</option>
-                    <option>Otro</option>
+                    <option value="Hombre"></option>
+                    <option value="Mujer"></option>
+                    <option value="Otro"></option>
                 </datalist>
             </li>
             <li>
@@ -45,7 +45,7 @@
             </li>
 
             <p>
-                <input type="submit" value="Enviar" onclick="mostrar()">
+                <button type="button" id="enviarBoton">Enviar</button>
             </p>
         </ul>
     </form>
