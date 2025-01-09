@@ -1,3 +1,5 @@
+
+
 document.body.onload = addElement;
 
 function addElement(){
@@ -15,8 +17,8 @@ function addElement(){
     div.appendChild(lista) 
 
     let datosJSON = [
-        {src:"/img/img1.jpg", desc: "descripcion1", specs: ["spec11", "spec12"]},
-        {src:"/img/img2.jpg", desc: "descripcion2", specs: ["spec21", "spec22"]}
+        {src:"uni.jpeg", desc: "descripcion1", specs: ["spec11", "spec12"]},
+        {src:"uni.jpeg", desc: "descripcion2", specs: ["spec21", "spec22"]}
     ]
     
     datosJSON.forEach(item => {
@@ -32,7 +34,13 @@ function addElement(){
         li2.appendChild(p)
 
         let ul = document.createElement("ul")
+        ul.classList.add("mostrar")
         li2.appendChild(ul)
+
+        img.onclick = function () {
+            mostrar(ul)
+        }
+
         item.specs.forEach(elemento => {
             let li3 = document.createElement("li")
             li3.textContent = elemento
@@ -41,4 +49,15 @@ function addElement(){
 
 
     })
+
+
+    function mostrar(lista) {
+        
+    
+        if (lista.style.display === "none") {
+            lista.style.display = "block";
+        } else {
+            lista.style.display = "none";
+        }
+    }
 }
